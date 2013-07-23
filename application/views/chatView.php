@@ -1,7 +1,21 @@
 <html>
 <head>
 	<title>CodeIgniter Shoutbox</title>
+	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<style type="text/css">
+		#messagewindow {
+			height: 250px;
+			border: 1px solid;
+			padding: 5px;
+			overflow: auto;
+		}
+		#wrapper {
+			margin: auto;
+			width: 438px;
+		}
+	</style>	
 	<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			
@@ -59,36 +73,22 @@
 			//setTimeout('loadMsg()', 4000);
 		}
 	</script>
-	<style type="text/css">
-		#messagewindow {
-			height: 250px;
-			border: 1px solid;
-			padding: 5px;
-			overflow: auto;
-		}
-		#wrapper {
-			margin: auto;
-			width: 438px;
-		}
-	</style>
+
 </head>
 <body>
-	<div id="wrapper">
+	<div class="container">
 	<p id="messagewindow"><span id="loading">Loading...</span></p>
 	<form id="chatform">
-	<div id="author">
-	Name: <input type="text" id="name" />
-	</div><br />
-
-	<div id="txt">
-	Message: <input type="text" name="content" id="content" value="" />
-	</div>
+  
+  <input class="input-block-level" type="text" id="name" placeholder="Name:" />
+	<input class="input-block-level" type="text" id="content" placeholder="Message:" />
 	
 	<div id="contentLoading" class="contentLoading">  
 	<img src="/images/blueloading.gif" alt="Loading data, please wait...">  
 	</div><br />
 	
-	<input type="submit" value="ok" /><br />
+	<button class="btn btn-large btn-primary" type="submit">Ok</button>
+
 	</form>
 	</div>
 </body>
